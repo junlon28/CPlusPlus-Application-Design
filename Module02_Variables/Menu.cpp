@@ -26,7 +26,7 @@ do
   while (choice < 1 || choice > 5)
   {
     cout << "Invalid option. Select again: ";
-    cin.clear();
+    cin >> choice;
   }
 
   switch (choice)
