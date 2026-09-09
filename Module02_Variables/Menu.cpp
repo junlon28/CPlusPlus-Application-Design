@@ -2,15 +2,34 @@
 
 using namespace std;
 
+    void Deposit(double& balance)
+{
+    double amount;
+    cout << "Enter deposit amount: ";
+    cin >> amount;
+    balance += amount;
+}
+
+void Withdraw(double& balance)
+{
+    double amount;
+    cout << "Enter amount withdrawn: ";
+    cin >> amount;
+    balance -= amount;
+}
+
+void Balance(double balance)
+{
+    cout << "Balance: " << balance << endl;
+}
+
+
 int main()
 {
     double balance = 0;
-    double amount = 0; 
     int choice = 0;
     bool quit = false;
-
-
-
+   
 do
 {
   cout << "1. Deposit" << endl;
@@ -23,41 +42,37 @@ do
 
   cin >> choice;
 
-  while (choice < 1 || choice > 5)
-  {
-    cout << "Invalid option. Select again: ";
-    cin >> choice;
-  }
 
   switch (choice)
   {
     case 1:
-    cout << "Enter amount: ";
-    cin >> amount;
-    balance += amount;
+    Deposit(balance);
     break;
 
     case 2:
-    cout << "Enter amount: ";
-    cin >> amount;
-    balance -= amount;
+    Withdraw(balance);
     break;
 
     case 3:
-    cout << "Balance: " << balance << endl;
+    Balance(balance);
     break;
 
     case 4:
-    cout << "Balance: " << balance << endl;
+    Balance(balance);
+    quit = true;
     
     case 5:
     cout << "Goodbye, have a good day." << endl;
     quit = true;
     break;
 
+    default:
+        cout << "Invalid choice, select again." <<endl;
+
   }
 
-} while(!quit);
+} 
+    while(!quit);
 
     return 0;
 }
