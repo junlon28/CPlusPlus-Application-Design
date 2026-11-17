@@ -20,3 +20,13 @@ I added input validation to my student record management program. The program ch
 ## Files
 - `Module08_Data/main.cpp` — student record system with input validation.
 - `Module09_AI/main.cpp` — validated student record system with a mock AI advisor.
+
+## Module 12: C++ and AI Performance
+
+For Module 12, I researched TensorFlow, an AI framework that uses C++ for computational operations and running machine-learning models. C++ helps with performance because it can efficiently handle calculations and memory.
+
+For my Student Record Management System, I added a performance report that calculates the average grade and counts passing and failing students. The function uses one loop to process the student records instead of repeatedly going through the array.
+
+If my application expanded to thousands of students, C++ would be useful for processing records efficiently, performing calculations, and supporting AI-powered student performance analysis.
+
+**Source:** https://www.tensorflow.org/api_docs/
